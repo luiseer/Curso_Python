@@ -1,3 +1,7 @@
+import torch
+x = torch.rand(5, 3)
+print(x)
+
 from operaciones import * 
 
 a, b, c, d = (10, 5, 0, "Hola")
