@@ -1,2 +1,4 @@
-Una linea de texto
+asofndlñase texto
 Otra linea con texto
+Esta linea la he modificado en memoria
+Cuarta linea del fichero
