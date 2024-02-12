@@ -28,7 +28,7 @@ def test():
     #                ("Ficheros de texto", "*.txt"))
     #     )
     # print(ruta)
-    fichero = Filedialog.asksaveasfile(title="Guardar un fichero", mode="r+", defaultextension=".txt") #Equivale a ruta y abrir el fichero en w
+    fichero = Filedialog.asksaveasfile(title="Guardar un fichero", mode="w", defaultextension=".txt") #Equivale a ruta y abrir el fichero en w
     if fichero is not None:
         fichero.write("hola!")
         fichero.close()
