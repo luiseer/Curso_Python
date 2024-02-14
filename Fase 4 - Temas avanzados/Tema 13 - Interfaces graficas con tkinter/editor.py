@@ -31,10 +31,34 @@ def open_file():
         
 def save():
     mensaje.set("Guardar Fichero :-)")
-
+    if ruta != "":
+        contenido = texto.get(1.0, "end-c")
+        fichero = open(ruta, 'w+')
+        fichero.write(contenido)
+        fichero.close()
+        mensaje.set("Fichero guardado correctamente :p")
+    else:
+        save_as()
+        
+        
 def save_as():
+    global ruta
     mensaje.set("Guardar como Fichero :-)")
-
+    fichero = Filedialog.asksaveasfile(
+        title="Guardar fichero",
+        mode="w",
+        defaultextension=".txt"
+    )
+    if fichero is not None:
+        ruta = fichero.name
+        contenido = texto.get(1.0, "end-c")
+        fichero = open(ruta, 'w+')
+        fichero.write(contenido)
+        fichero.close()
+        mensaje.set("Fichero guardado correctamente :p")
+    else:
+        mensaje.set("Guardado Cancelado")
+        ruta = ""
 
 root = Tk()
 root.title("Text Editor")
